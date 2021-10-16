@@ -22,9 +22,9 @@ export class AppComponent {
     this.todos.splice(i, 1);
   }
 
-  deleteAll() {
+  deleteAll(e: Event) {
     console.log('Del all clicked');
-
+    e.preventDefault();
     this.todos.splice(0, this.todos.length);
     this.task = '';
     console.log(this.todos);

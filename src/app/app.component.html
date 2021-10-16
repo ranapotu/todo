@@ -24,11 +24,16 @@
         >
           Enter
         </button>
+        <button
+          class="btn btn-danger mb-3"
+          (click)="deleteAll($event)"
+          style="margin-left: 20px"
+          [disabled]="todos.length === 0"
+        >
+          Clear All
+        </button>
       </div>
     </form>
-    <button class="btn btn-danger mb-3" style="" (click)="deleteAll()">
-      Clear All
-    </button>
   </div>
   <div *ngIf="todos.length !== 0" class="container">
     <table class="table table-dark table-striped">
